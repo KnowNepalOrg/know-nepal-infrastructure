@@ -1,51 +1,59 @@
 # Know Nepal Infrastructure
 
-Infrastructure and deployment configuration for the Know Nepal project.
+Infrastructure configuration and operational resources for the
+**Know Nepal** project.
 
-This repository contains the operational configuration required to
-deploy, connect, and maintain Know Nepal's application environments.
+This repository is intended for infrastructure-related configuration
+that is maintained separately from the application source code.
 
-## Responsibilities
+## Scope
 
-This repository manages:
+This repository may contain resources related to:
 
-- Deployment configuration
-- Infrastructure configuration
+- Deployment
+- Hosting
 - Environment configuration
-- Networking
 - Database infrastructure
+- Networking
+- Backups
 - Containerization
-- CI/CD
 - Operational tooling
+
+Infrastructure resources should be added here when they are managed
+separately from the application repositories.
 
 ## Repository Boundary
 
-Application source code is maintained in the appropriate application
+Application source code remains in the appropriate application
 repositories.
 
 Project-wide technical documentation is maintained in
 [`know-nepal-docs`](https://github.com/KnowNepalOrg/know-nepal-docs).
 
-This repository focuses on the infrastructure required to run Know
-Nepal.
+Application-level CI/CD configuration may remain with the application
+repository when it is tightly coupled to the application build and
+deployment process.
+
+This repository focuses on infrastructure concerns that are
+independent from application source code.
 
 ## Environments
 
-Infrastructure may be organized around:
+Infrastructure may support different environments such as:
 
 - Development
 - Staging
 - Production
 
-Environment-specific configuration should remain isolated from other
-environments.
+Environment-specific configuration should remain isolated where
+necessary.
 
 ## Secrets
 
 Secrets and credentials must never be committed to this repository.
 
-Sensitive values should be provided through the appropriate secret or
-environment configuration mechanism.
+Sensitive values should be provided through the appropriate environment
+or secret-management mechanism.
 
 ## Related Documentation
 
